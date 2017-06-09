@@ -29,11 +29,13 @@ mainClassName = 'com.objectpartners.stormydata.StormyDataApplication'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
+
 repositories {
 	mavenCentral()
 	maven { url "https://repo.spring.io/snapshot" }
 	maven { url "https://repo.spring.io/milestone" }
 }
+
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
@@ -52,6 +54,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.hibernate/hibernate-java8
     compile group: 'org.hibernate', name: 'hibernate-java8', version: '5.2.10.Final'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-csv
+    compile group: 'org.apache.commons', name: 'commons-csv', version: '1.4'
 
 // https://mvnrepository.com/artifact/org.spockframework/spock-core
     testCompile group: 'org.spockframework', name: 'spock-core', version: '1.1-groovy-2.4'

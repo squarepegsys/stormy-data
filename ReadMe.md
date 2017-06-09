@@ -1,7 +1,10 @@
 
 # Stormy Data
 
-A seemingly simple sample app in Spring Boot 2.
+A seemingly simple sample app in Spring Boot 1.5 to demonstrate out Flyway migrations work
+
+The source data CSV file is from https://catalog.data.gov/dataset/ncdc-storm-events-database
+
 
 I used Postgres in Docker for the database. To install:
 
