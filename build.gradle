@@ -15,6 +15,8 @@ buildscript {
 	}
 }
 
+// So we get Hibernates time zone configuration option (released October 2016):
+ext['hibernate.version'] = '5.2.3.Final'
 
 apply plugin: 'application'
 apply plugin: 'java'

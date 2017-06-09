@@ -1,7 +1,7 @@
 package com.objectpartners.stormydata.entity;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 /**
  * Created by mikeh on 6/6/17.
@@ -15,11 +15,18 @@ public class Storm {
     private Long id;
 
     @Column(name="begin_timestamp")
-    private LocalDateTime beginTime;
+    private ZonedDateTime beginTime;
 
     @Column(name="end_timestamp")
-    private LocalDateTime endTime;
+    private ZonedDateTime endTime;
 
+
+
+    @Column
+    private Long eventId;
+
+    @Column
+    private Long episodeId;
 
 
     @ManyToOne
@@ -42,19 +49,35 @@ public class Storm {
         this.id = id;
     }
 
-   public LocalDateTime getBeginTime() {
+   public ZonedDateTime getBeginTime() {
         return beginTime;
     }
 
-    public void setBeginTime(LocalDateTime beginTime) {
+    public void setBeginTime(ZonedDateTime beginTime) {
         this.beginTime = beginTime;
     }
 
-    public LocalDateTime getEndTime() {
+    public ZonedDateTime getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(LocalDateTime endTime) {
+    public Long getEventId() {
+        return eventId;
+    }
+
+    public void setEventId(Long eventId) {
+        this.eventId = eventId;
+    }
+
+    public Long getEpisodeId() {
+        return episodeId;
+    }
+
+    public void setEpisodeId(Long episodeId) {
+        this.episodeId = episodeId;
+    }
+
+    public void setEndTime(ZonedDateTime endTime) {
         this.endTime = endTime;
     }
 
